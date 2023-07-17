@@ -44,18 +44,19 @@ input {
 input:focus {
   box-shadow: 0px 0px 10px indigo !important;
 }
+input,
+select,
+button {
+  padding: 10px 20px !important;
+  border-color: indigo !important;
+  background-color: transparent !important;
+}
+input:focus,
+select:focus {
+  box-shadow: 0px 0px 10px indigo !important;
+}
 @media (min-width: 1001px) {
-  input,
-  select,
-  button {
-    padding: 10px 20px !important;
-    border-color: indigo !important;
-    background-color: transparent !important;
-  }
-  input:focus,
-  select:focus {
-    box-shadow: 0px 0px 10px indigo !important;
-  }
+
  
   #main {
     
@@ -68,21 +69,7 @@ input:focus {
 }
 
 @media (max-width: 1000px) {
-  input,
-  select,
-  button {
-    border-color: grey !important;
-    background-color: transparent !important;
-  }
-  input:focus,
-  select:focus {
-    box-shadow: 0px 0px 10px white !important;
-  }
-  input:focus{
-    background-color: indigo !important;
-    color: white !important;
-  }
-  /* targeting input type button */
+  
 
   #main {
     width: 90%;
