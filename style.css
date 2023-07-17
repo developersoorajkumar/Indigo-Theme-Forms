@@ -2,30 +2,36 @@
   background-color: #222831;
   color: white !important;
 }
-h1{
-    text-align: center;
-    color: indigo;
-    margin: 10px;
+
+h1 {
+  text-align: center;
+  color: indigo;
+  margin: 10px;
 }
+
 a {
   color: grey !important;
   text-decoration: none;
 }
-#main{
+
+#main {
   background-color: white;
 }
-a:hover {
 
+a:hover {
   color: indigo !important;
 }
-.button{
+
+.button {
   background-color: #4b0082 !important;
-  color: white;  
+  color: white;
 }
+
 #centered {
   width: 50%;
   background-color: #393e46;
 }
+
 /* #label{
     width: 5px;
     height: auto;
@@ -33,17 +39,19 @@ a:hover {
     background-color: indigo;
     
 } */
-img:hover{
+img:hover {
   transform: rotateY(360deg);
   transition: 0.5s;
 }
+
 input {
   border-radius: none !important;
-  
 }
+
 input:focus {
   box-shadow: 0px 0px 10px indigo !important;
 }
+
 input,
 select,
 button {
@@ -51,15 +59,14 @@ button {
   border-color: indigo !important;
   background-color: transparent !important;
 }
+
 input:focus,
 select:focus {
   box-shadow: 0px 0px 10px indigo !important;
 }
-@media (min-width: 1001px) {
 
- 
+@media (min-width: 1001px) {
   #main {
-    
     width: 50%;
     margin: 20px auto;
     border: 1px solid grey;
@@ -69,8 +76,6 @@ select:focus {
 }
 
 @media (max-width: 1000px) {
-  
-
   #main {
     width: 90%;
     margin: 20px auto;
@@ -78,5 +83,4 @@ select:focus {
     border-radius: 10px;
     box-shadow: 0px 0px 10px grey !important;
   }
- 
 }
