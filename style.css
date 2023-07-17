@@ -1,0 +1,95 @@
+.navbar {
+  background-color: #222831;
+  color: white !important;
+}
+h1{
+    text-align: center;
+    color: indigo;
+    margin: 10px;
+}
+a {
+  color: grey !important;
+  text-decoration: none;
+}
+#main{
+  background-color: white;
+}
+a:hover {
+
+  color: indigo !important;
+}
+.button{
+  background-color: #4b0082 !important;
+  color: white;  
+}
+#centered {
+  width: 50%;
+  background-color: #393e46;
+}
+/* #label{
+    width: 5px;
+    height: auto;
+    margin-right: 5px;
+    background-color: indigo;
+    
+} */
+img:hover{
+  transform: rotateY(360deg);
+  transition: 0.5s;
+}
+input {
+  border-radius: none !important;
+  
+}
+input:focus {
+  box-shadow: 0px 0px 10px indigo !important;
+}
+@media (min-width: 1001px) {
+  input,
+  select,
+  button {
+    padding: 10px 20px !important;
+    border-color: indigo !important;
+    background-color: transparent !important;
+  }
+  input:focus,
+  select:focus {
+    box-shadow: 0px 0px 10px indigo !important;
+  }
+ 
+  #main {
+    
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #4b0082 !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  input,
+  select,
+  button {
+    border-color: grey !important;
+    background-color: transparent !important;
+  }
+  input:focus,
+  select:focus {
+    box-shadow: 0px 0px 10px white !important;
+  }
+  input:focus{
+    background-color: indigo !important;
+    color: white !important;
+  }
+  /* targeting input type button */
+
+  #main {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px grey !important;
+  }
+ 
+}
