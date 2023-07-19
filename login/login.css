@@ -32,13 +32,6 @@ a:hover {
   background-color: #393e46;
 }
 
-/* #label{
-    width: 5px;
-    height: auto;
-    margin-right: 5px;
-    background-color: indigo;
-    
-} */
 img:hover {
   transform: rotateY(360deg);
   transition: 0.5s;
