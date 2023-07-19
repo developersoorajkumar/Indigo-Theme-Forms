@@ -94,7 +94,7 @@ select:focus {
   div{
     font-size: medium !important;
   }
-  {
+  .icon{
     width: 25px !important;
   }
 }
