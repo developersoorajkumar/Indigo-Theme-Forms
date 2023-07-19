@@ -11,13 +11,13 @@ function adminLogin() {
     message.innerHTML = "Email Address is required";
     setTimeout(function () {
       email.focus();
-    }, 2000);
+    }, 1000);
   } else if (password.value == "") {
     logo.style.display = "inline";
     message.innerHTML = "Password is required";
     setTimeout(function () {
       password.focus();
-    }, 2000);
+    }, 1000);
   } else {
     logo.style.display = "none";
     message.style.display = "none";
@@ -29,7 +29,7 @@ function adminLogin() {
       success.style.display = "none";
       email.value = "";
       password.value = "";
-    }, 5000);
-    
+    }, 3000);
+
   }
 }

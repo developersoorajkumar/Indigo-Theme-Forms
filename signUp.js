@@ -24,79 +24,79 @@ function signUp() {
     
     setTimeout(function () {
       fullname.focus();
-    }, 2000);
+    }, 1000);
   } else if (fatherName.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Father Name is required";
     setTimeout(function () {
       fatherName.focus();
-    }, 2000);
+    }, 1000);
   } else if (emailAddress.value == "") {
     logo.style.display = "inline";
     message.innerHTML = "Email Address is required";
     setTimeout(function () {
       emailAddress.focus();
-    }, 2000);
+    }, 1000);
   } else if (newPassword.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Password is required";
     setTimeout(function () {
       newPassword.focus();
-    }, 2000);
+    }, 1000);
   } else if (confirmPassword.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Confirm Password is required";
     setTimeout(function () {
       confirmPassword.focus();
-    }, 2000);
+    }, 1000);
   } else if (confirmPassword.value != newPassword.value) {
     logo.style.display = "inline";
     message.innerHTML = "Password does not match";
     setTimeout(function () {
       newPassword.focus();
-    }, 2000);
+    }, 1000);
   } else if (cnicNumber.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " CNIC Number is required";
     setTimeout(function () {
       cnicNumber.focus();
-    }, 2000);
+    }, 1000);
   } else if (mobileNumber.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Mobile Number is required";
     setTimeout(function () {
       mobileNumber.focus();
-    }, 2000);
+    }, 1000);
   } else if (selectCountry.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Country is required";
     setTimeout(function () {
       selectCountry.focus();
-    }, 2000);
+    }, 1000);
   } else if (gender.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Gender is required";
     setTimeout(function () {
       gender.focus();
-    }, 2000);
+    }, 1000);
   } else if (qualification.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Qualification is required";
     setTimeout(function () {
       qualification.focus();
-    }, 2000);
+    }, 1000);
   } else if (selectCourses.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Course Selection is required";
     setTimeout(function () {
       selectCourses.focus();
-    }, 2000);
+    }, 1000);
   } else if (profilePhoto.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Profile Photo is required";
     setTimeout(function () {
       profilePhoto.focus();
-    }, 2000);
+    }, 1000);
   } else {
     logo.style.display = "none";
     message.style.display = "none";
@@ -118,7 +118,7 @@ function signUp() {
       qualification.value = "";
       selectCourses.value = "";
       profilePhoto.value = "";
-    }, 5000);
+    }, 3000);
   }
 }
 function continueWithGoogle() {
