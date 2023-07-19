@@ -98,10 +98,14 @@ function signUp() {
       profilePhoto.focus();
     }, 2000);
   } else {
+    logo.style.display = "none";
+    message.style.display = "none";
     success.style.display = "inline";
     successMessage.style.display = "inline";
     successMessage.innerHTML = "Successfully Registered";
     setTimeout(function () {
+      successMessage.style.display = "none";
+      success.style.display = "none";
       fullname.value = "";
       fatherName.value = "";
       emailAddress.value = "";
