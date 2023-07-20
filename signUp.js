@@ -98,6 +98,19 @@ function signUp() {
       profilePhoto.focus();
     }, 1000);
   } else {
+    let email = emailAddress.value;
+    let password = confirmPassword.value;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Login successful, do something with the user data
+        const user = userCredential.user;
+        console.log("User logged in:", user);
+      })
+      .catch((error) => {
+        // Handle login errors
+        message = error.message;
+        console.error("Login error:", message);
+      });
     logo.style.display = "none";
     message.style.display = "none";
     success.style.display = "inline";
