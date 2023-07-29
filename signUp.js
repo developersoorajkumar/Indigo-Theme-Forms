@@ -5,7 +5,6 @@ let newPassword = document.getElementById("newPassword");
 let confirmPassword = document.getElementById("confirmPassword");
 let cnicNumber = document.getElementById("cnicNumber");
 let mobileNumber = document.getElementById("mobileNumber");
-let selectCountry = document.getElementById("selectCountry");
 let gender = document.getElementById("gender");
 let qualification = document.getElementById("qualification");
 let selectCourses = document.getElementById("selectCourses");
@@ -15,13 +14,25 @@ let logo = document.getElementById("logo");
 let success = document.getElementById("success");
 let successMessage = document.getElementById("successMessage");
 
+fullname.value = "Sooraj Kumar";
+fatherName.value = "Panju Mal";
+cnicNumber.value = "4430310430263"
+mobileNumber.value = "03412049429"
+gender.value = "Male"
+qualification.value = "Intermediate"
+selectCourses.value = "Graphic Designing"
+// authentication dummy data
+emailAddress.value = "soorajku2021@gmail.com";
+newPassword.value = "soorajkumar";
+confirmPassword.value = "soorajkumar";
+
 
 // sign up function
 function signUp() {
   if (fullname.value == "") {
     logo.style.display = "inline";
     message.innerHTML = "Name is required";
-    
+
     setTimeout(function () {
       fullname.focus();
     }, 1000);
@@ -43,6 +54,12 @@ function signUp() {
     setTimeout(function () {
       newPassword.focus();
     }, 1000);
+  } else if (newPassword.value.length < 6) {
+    logo.style.display = "inline";
+    message.innerHTML = " Password atleast 6 Digits Long";
+    setTimeout(function () {
+      newPassword.focus();
+    }, 1000);
   } else if (confirmPassword.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Confirm Password is required";
@@ -61,17 +78,23 @@ function signUp() {
     setTimeout(function () {
       cnicNumber.focus();
     }, 1000);
+  } else if (cnicNumber.value.length !== 13) {
+    logo.style.display = "inline";
+    message.innerHTML = "13 Digits are required";
+    setTimeout(function () {
+      cnicNumber.focus();
+    }, 1000);
   } else if (mobileNumber.value == "") {
     logo.style.display = "inline";
     message.innerHTML = " Mobile Number is required";
     setTimeout(function () {
       mobileNumber.focus();
     }, 1000);
-  } else if (selectCountry.value == "") {
+  } else if (mobileNumber.value.length !== 11) {
     logo.style.display = "inline";
-    message.innerHTML = " Country is required";
+    message.innerHTML = " 11 Digits are required";
     setTimeout(function () {
-      selectCountry.focus();
+      mobileNumber.focus();
     }, 1000);
   } else if (gender.value == "") {
     logo.style.display = "inline";
@@ -98,19 +121,6 @@ function signUp() {
       profilePhoto.focus();
     }, 1000);
   } else {
-    let email = emailAddress.value;
-    let password = confirmPassword.value;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Login successful, do something with the user data
-        const user = userCredential.user;
-        console.log("User logged in:", user);
-      })
-      .catch((error) => {
-        // Handle login errors
-        message = error.message;
-        console.error("Login error:", message);
-      });
     logo.style.display = "none";
     message.style.display = "none";
     success.style.display = "inline";
