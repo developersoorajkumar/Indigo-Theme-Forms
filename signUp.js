@@ -140,7 +140,8 @@ function signUp() {
             }
           }, 3000);
         });
-      }).catch((error) => {
+      })
+      .catch((error) => {
         console.log("error", error.message);
         logo.style.display = "inline";
         message.style.display = "inline";
@@ -148,9 +149,19 @@ function signUp() {
         setTimeout(() => {
           logo.style.display = "none";
           message.style.display = "none";
-
         }, 2000);
       });
+    firebase.firestore().collection("Users").add({
+      Username: fullname.value,
+      FatherName: fatherName.value,
+      Email: emailAddress.value,
+      Password: newPassword.value,
+      CNIC: cnicNumber.value,
+      MobileNumber: mobileNumber.value,
+      Gender: gender.value,
+      Qualification: qualification.value,
+      Course: selectCourses.value,
+    });
   }
 }
 function continueWithGoogle() {
