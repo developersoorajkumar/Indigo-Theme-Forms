@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Verification</h1>
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../background/style.css" />
+    <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+
+  <script type="module">
+     const firebaseConfig = {
+    apiKey: "AIzaSyA3vm18rR6QFV_lq7UDwOR1fhSKKeFfxV8",
+    authDomain: "assignment-6febe.firebaseapp.com",
+    projectId: "assignment-6febe",
+    storageBucket: "assignment-6febe.appspot.com",
+    messagingSenderId: "306558243860",
+    appId: "1:306558243860:web:7e0de3224b56d9de650301",
+    measurementId: "G-V8JGBTH6FH"
+  };
+
+    firebase.initializeApp(firebaseConfig);
+  </script> 
+  </head>
+  <body>
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div id="main">
+        <div class="text-center mb-3 form-control-lg">
+          <img
+            src="../images/email.png"
+            class="rounded img-fluid"
+            alt="User Logo"
+          />
+        </div>
+        <h1 class="bg-white">Email Verification</h1>
+        <div class="mb-3 form-control-lg">
+            <input
+              type="button"
+              class="border-0 rounded-2 w-100 button"
+              value="Click to Verify"
+              onclick="verify()"
+            />
+          </div>
+          <div class="mb-0 p-0 form-control-lg text-center">
+            <div id="logo"><img src="../images/error.png"  width="25" class="me-1 mb-1 icon"  alt="logo"></div>
+            <div id="success"><img src="../images/sucess.png" width="25" class="me-1 mb-1 icon"  alt="logo"></div>
+            <span id="successMessage" ></span>
+            <span id="message" class="text-danger "></span>
+          </div>
+<hr>
+<div class="mb-3 form-control-lg d-flex justify-content-center">
+    <p class="text-center">Verification Completed? <a href="../login/login.html">Login</a></p>
+  </div>
+    <script src="./verify.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
