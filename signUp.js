@@ -16,16 +16,15 @@ let successMessage = document.getElementById("successMessage");
 
 fullname.value = "Sooraj Kumar";
 fatherName.value = "Panju Mal";
-cnicNumber.value = "4430310430263"
-mobileNumber.value = "03412049429"
-gender.value = "Male"
-qualification.value = "Intermediate"
-selectCourses.value = "Graphic Designing"
+cnicNumber.value = "4430310430263";
+mobileNumber.value = "03412049429";
+gender.value = "Male";
+qualification.value = "Intermediate";
+selectCourses.value = "Graphic Designing";
 // authentication dummy data
 emailAddress.value = "soorajku2021@gmail.com";
 newPassword.value = "soorajkumar";
 confirmPassword.value = "soorajkumar";
-
 
 // sign up function
 function signUp() {
@@ -121,27 +120,27 @@ function signUp() {
       profilePhoto.focus();
     }, 1000);
   } else {
-    logo.style.display = "none";
-    message.style.display = "none";
-    success.style.display = "inline";
-    successMessage.style.display = "inline";
-    successMessage.innerHTML = "Successfully Registered";
-    setTimeout(function () {
-      successMessage.style.display = "none";
-      success.style.display = "none";
-      fullname.value = "";
-      fatherName.value = "";
-      emailAddress.value = "";
-      newPassword.value = "";
-      confirmPassword.value = "";
-      cnicNumber.value = "";
-      mobileNumber.value = "";
-      selectCountry.value = "";
-      gender.value = "";
-      qualification.value = "";
-      selectCourses.value = "";
-      profilePhoto.value = "";
-    }, 3000);
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(emailAddress.value, confirmPassword.value)
+      .then((userCredential) => {
+        var user = userCredential.user;
+        console.log(user);
+        setTimeout(function () {
+          logo.style.display = "none";
+          message.style.display = "none";
+          success.style.display = "inline";
+          successMessage.style.display = "inline";
+          successMessage.innerHTML = "Successfully Registered";
+          setTimeout(function () {
+            if (user.emailVerified == true) {
+              window.location.assign("./Welcome/welcome.html");
+            } else {
+              window.location.assign("./Verification/verification.html");
+            }
+          }, 3000);
+        });
+      });
   }
 }
 function continueWithGoogle() {
