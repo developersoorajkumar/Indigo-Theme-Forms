@@ -25,14 +25,6 @@ let verify = () => {
         setTimeout(() => {
           logo.style.display = "none";
           message.style.display = "none";
-        }, 2000);
-       
-          if (user.emailVerified == true) {
-            window.location.assign("../Login/login.html");
-            console.log("Email verified", "Signed in");
-          } else {
-            window.location.assign("verification.html");
-          }
-        
+        }, 2000);        
       })
   };
