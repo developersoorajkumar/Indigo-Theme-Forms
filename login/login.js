@@ -18,7 +18,13 @@ function login() {
     setTimeout(function () {
       password.focus();
     }, 1000);
-  } else {
+  }else if (password.value.length < 6) {
+    logo.style.display = "inline";
+    message.innerHTML = " Password atleast 6 Digits Long";
+    setTimeout(function () {
+      password.focus();
+    }, 1000);
+  }  else {
     logo.style.display = "none";
     message.style.display = "none";
     success.style.display = "inline";
