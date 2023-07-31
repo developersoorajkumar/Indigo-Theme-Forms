@@ -7,16 +7,20 @@ let verify = () => {
     .auth()
     .currentUser.sendEmailVerification()
     .then(() => {
-      console.log("Email verification sent!");
-      success.style.display = "inline";
-      successMessage.style.display = "inline";
-      successMessage.innerHTML = "Verification email sent successfully";
+      setTimeout(function () {
+        
+        success.style.display = "inline";
+        successMessage.style.display = "inline";
+        successMessage.innerHTML = "Verification email sent successfully";
+      },1000)
       setTimeout(() => {
-        logo.style.display = "none";
-        message.style.display = "none";
+        successMessage.innerHTML = "Check Our Email From <b> noreply </b>";
+      }, 5000);
+      setTimeout(() => {
         success.style.display = "none";
         successMessage.style.display = "none";
-      }, 2000);
+        email.value = "";
+      }, 10000);
     })
     .catch((error) => {
       console.log("error", error.message);
