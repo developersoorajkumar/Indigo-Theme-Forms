@@ -14,18 +14,6 @@ let logo = document.getElementById("logo");
 let success = document.getElementById("success");
 let successMessage = document.getElementById("successMessage");
 
-fullname.value = "Sooraj Kumar";
-fatherName.value = "Panju Mal";
-cnicNumber.value = "4430310430263";
-mobileNumber.value = "03412049429";
-gender.value = "Male";
-qualification.value = "Intermediate";
-selectCourses.value = "Graphic Designing";
-// authentication dummy data
-emailAddress.value = "soorajku2021@gmail.com";
-newPassword.value = "soorajkumar";
-confirmPassword.value = "soorajkumar";
-
 // sign up function
 function signUp() {
   if (fullname.value == "") {

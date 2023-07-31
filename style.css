@@ -85,26 +85,27 @@ select:focus {
   }
 }
 @media (max-width: 600px) {
-  img{
+  img {
     width: 64px !important;
   }
-  input,select{
+  input,
+  select {
     padding: 5px 10px !important;
   }
-  div{
+  div {
     font-size: medium !important;
   }
-  .icon{
+  .icon {
     width: 25px !important;
   }
 }
-#logo{
+#logo {
   display: none;
 }
-#success{
+#success {
   display: none;
 }
-#successMessage{
+#successMessage {
   display: none;
   color: #4b0082;
   font-weight: bold !important;

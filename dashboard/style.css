@@ -1,21 +1,17 @@
-.navbar{
-    background-color: #4b0082 !important;
-    font-size: large !important;
-    
+.navbar {
+  background-color: #4b0082 !important;
+  font-size: large !important;
 }
-.navbar>a{
-    margin: 90px 10px !important;
+.navbar > a {
+  margin: 90px 10px !important;
 }
 @media screen and (min-width: 300px), (max-width: 700px) {
-    .icons{
-       width: 25px !important; 
-    }
-    
+  .icons {
+    width: 25px !important;
+  }
 }
 @media screen and (min-width: 1000px) {
-    
-    .icons{
-       width: 20px !important;
-    }
-    
+  .icons {
+    width: 20px !important;
+  }
 }
