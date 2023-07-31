@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+
+    <script type="module">
+        const firebaseConfig = {
+            apiKey: "AIzaSyA3vm18rR6QFV_lq7UDwOR1fhSKKeFfxV8",
+            authDomain: "assignment-6febe.firebaseapp.com",
+            projectId: "assignment-6febe",
+            storageBucket: "assignment-6febe.appspot.com",
+            messagingSenderId: "306558243860",
+            appId: "1:306558243860:web:7e0de3224b56d9de650301",
+            measurementId: "G-V8JGBTH6FH",
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<style>
+#form-container {
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px grey !important;
+}
+input[type="text"], input[type="email"],textarea {
+    width: 100%;
+    padding: 5px 10px !important;
+    border: indigo 2px solid !important;
+  background-color: transparent !important;
+}
+input {
+  border-radius: none !important;
+}
+
+input:focus {
+  box-shadow: 0px 0px 10px indigo !important;
+}
+</style>
+
+<body>
+    <header class="d-flex justify-content-between">
+        <div class="mx-3 w-25">
+            <h1 id="welcome">Welcome</h1>
+        </div>
+        <div class="w-50 h-0">
+            <ul class="mt-4">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </div>
+        <div class="mx-3">
+            <img src="../images/user.png" alt="">
+        </div>
+
+    </header>
+    <h1 class="indigo">Welcome to CONTACT</h1>
+    <div class="w-50 mx-auto" id="form-container">
+        <div>
+            <div class="mb-3 form-control-lg">
+                <div class="mb-1">Full Name</div>
+                <input type="text" id="password" name="password" />
+            </div>
+            <div class="mb-3 form-control-lg">
+                <div class="mb-1">Email Address</div>
+                <input type="email" id="email" name="email" />
+            </div>
+
+            <div class="mb-3 form-control-lg">
+                <div class="mb-1">Message</div>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+
+
+        </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+</html>
