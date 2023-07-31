@@ -4,21 +4,34 @@ let message = document.getElementById("message");
 let success = document.getElementById("success");
 let successMessage = document.getElementById("successMessage");
 
-function resetPassword(){
+
+  function resetPassword() {
+    if (email.value == "") {
+      logo.style.display = "inline";
+      message.style.display = "inline";
+      message.innerHTML = "Email Address is required";
+      setTimeout(function () {
+        email.focus();
+      }, 1000);
+    } else {
     firebase
       .auth()
       .sendPasswordResetEmail(email.value)
       .then(() => {
-        console.log("Email verification sent!");
-        success.style.display = "inline";
-        successMessage.style.display = "inline";
-        successMessage.innerHTML = "Verification email sent successfully";
+        setTimeout(function () {
+          success.style.display = "inline";
+          successMessage.style.display = "inline";
+          successMessage.innerHTML = "Email Sent Successfully";
+        },1000)
         setTimeout(() => {
-          logo.style.display = "none";
-          message.style.display = "none";
+          successMessage.innerHTML = "Check Our Email From <b> noreply </b>";
+        },5000)
+        setTimeout(() => {
           success.style.display = "none";
           successMessage.style.display = "none";
-        }, 2000);
+          email.value = "";
+        }, 10000);
+        
       })
       .catch((error) => {
         console.log("error", error.message);
@@ -28,6 +41,7 @@ function resetPassword(){
         setTimeout(() => {
           logo.style.display = "none";
           message.style.display = "none";
-        }, 2000);  
+        }, 2000);
       });
-  };
+  }
+}
